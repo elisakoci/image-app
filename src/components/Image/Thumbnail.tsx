@@ -1,8 +1,8 @@
 import React from "react";
 import { Card } from "antd";
+import { ImageModelType } from "../../types/image";
 
-const Thumbnail = ({ image }: any) => {
-  const { title, description, imageUrl } = image;
+const Thumbnail = ({ title, link, description}: ImageModelType) => {
 
   return (
     <Card
@@ -10,7 +10,7 @@ const Thumbnail = ({ image }: any) => {
       style={
         {width: 300}
       }
-      cover={<img alt={title} src={imageUrl} />}
+      cover={<img alt={title} src={link} />}
     >
       <Card.Meta title={title} description={description} />
     </Card>
