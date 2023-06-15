@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchImagesGallery } from "../redux/imageGallery/actions";
-import { ImageModelType } from "../types/image";
+import { DataType } from "../types/image";
 
 export function useImageGalleryData() {
   const { data, loading, loaded, errored, error } = useSelector(
@@ -10,12 +10,12 @@ export function useImageGalleryData() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchImagesGallery());
+    dispatch(fetchImagesGallery({page: 1}));
   }, []);
 
   return {
     list: data ?? [],
-    gallery: data?.find((item: ImageModelType) => item.id),
+    gallery: data?.find((item: DataType) => item.id),
     loading,
     loaded,
     errored,

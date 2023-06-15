@@ -2,18 +2,23 @@ import React from "react";
 import { Card } from "antd";
 import { ImageModelType } from "../../types/image";
 
-const Thumbnail = ({ title, link, description}: ImageModelType) => {
+export interface IProps {
+  images: ImageModelType[];
+}
 
+const Thumbnail = ({ images }: IProps) => {
   return (
-    <Card
-      hoverable
-      style={
-        {width: 300}
-      }
-      cover={<img alt={title} src={link} />}
-    >
-      <Card.Meta title={title} description={description} />
-    </Card>
+    <>
+      {images?.map((item: ImageModelType) => (
+        <Card
+          hoverable
+          style={{ width: 300 }}
+          cover={<img alt={item?.title} src={item?.link} />}
+        >
+          <Card.Meta title={item?.title} description={item?.description} />
+        </Card>
+      ))}
+    </>
   );
 };
 

@@ -2,6 +2,15 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## 📚 Used Libraries
+
+- [ANT Design](https://ant.design/)
+- [Axios](https://github.com/axios/axios)
+- [styled-components](https://styled-components.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Imgur API](https://api.imgur.com/)
+
 ## Available Scripts
 
 In the project directory, you can run:
