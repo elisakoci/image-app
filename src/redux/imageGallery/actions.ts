@@ -2,7 +2,7 @@ import { Dispatch } from "redux";
 import { getImagesGallery } from "../../api/image-api";
 import { ImageGallery } from "./types";
 
-export const fetchImagesGallery = () => (dispatch: Dispatch) => {
+export const fetchImagesGallery: any = () => (dispatch: Dispatch) => {
   dispatch({
     type: ImageGallery.FETCH_IMAGES_GALLERY_START,
   });
